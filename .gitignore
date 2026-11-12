@@ -1,0 +1,9 @@
+.venv/
+.env
+__pycache__/
+parking_log.csv
+debug_db.py
+test_db.py
+test_kcisa.py
+main_py_원본백업_dart내용.txt
+  

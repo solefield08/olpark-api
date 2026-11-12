@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: olpark-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-deploy.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      # 값은 Render 화면에서 직접 입력한다 (저장소에 올리지 않음)
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
